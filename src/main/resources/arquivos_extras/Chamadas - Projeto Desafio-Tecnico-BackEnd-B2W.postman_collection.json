@@ -1,0 +1,625 @@
+{
+	"info": {
+		"_postman_id": "1a864840-bb75-44aa-8a09-e75358b5b2a6",
+		"name": "Chamadas - Projeto Desafio-Tecnico-BackEnd-B2W",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-Chama ao endpoint - /api/planeta/listarPorId/{id}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/listarPorId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"listarPorId",
+						"1"
+					]
+				},
+				"description": "Chamada do endpoint que serve para listar um planeta por id do banco."
+			},
+			"response": [
+				{
+					"name": "1-Chama ao endpoint - /api/planeta/listarPorId/{id}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/listarPorId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"listarPorId",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Feb 2019 09:16:11 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"conteudoDoResponse\": {\n        \"id\": 1,\n        \"nome\": \"Alderaan\",\n        \"clima\": \"temperate\",\n        \"terreno\": \"grasslands, mountains\",\n        \"qtdFilmes\": 2\n    },\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "2-Chama ao endpoint - /api/planeta/listarTodos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/listarTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"listarTodos"
+					]
+				},
+				"description": "Chamada do endpoint que serve para todos os planetas do banco."
+			},
+			"response": [
+				{
+					"name": "2-Chama ao endpoint - /api/planeta/listarTodos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/listarTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"listarTodos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Feb 2019 09:16:13 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"conteudoDoResponse\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Alderaan\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"grasslands, mountains\",\n            \"qtdFilmes\": 2\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Yavin IV\",\n            \"clima\": \"temperate, tropical\",\n            \"terreno\": \"jungle, rainforests, mountains\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 3,\n            \"nome\": \"Hoth\",\n            \"clima\": \"frozen\",\n            \"terreno\": \"tundra, ice caves, mountain ranges, mountains\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 4,\n            \"nome\": \"Dagobah\",\n            \"clima\": \"murky\",\n            \"terreno\": \"swamp, jungles\",\n            \"qtdFilmes\": 2\n        },\n        {\n            \"id\": 5,\n            \"nome\": \"Bespin\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"gas giant\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 6,\n            \"nome\": \"Endor\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"forests, mountains, lakes\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 7,\n            \"nome\": \"Naboo\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"grassy hills, swamps, forests, mountains\",\n            \"qtdFilmes\": 4\n        },\n        {\n            \"id\": 8,\n            \"nome\": \"Coruscant\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"cityscape, mountains\",\n            \"qtdFilmes\": 4\n        },\n        {\n            \"id\": 9,\n            \"nome\": \"Kamino\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"ocean\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 10,\n            \"nome\": \"Geonosis\",\n            \"clima\": \"temperate, arid\",\n            \"terreno\": \"rock, desert, mountain, barren\",\n            \"qtdFilmes\": 2\n        },\n        {\n            \"id\": 11,\n            \"nome\": \"Utapau\",\n            \"clima\": \"temperate, arid, windy\",\n            \"terreno\": \"scrublands, savanna, canyons, sinkholes\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 12,\n            \"nome\": \"Mustafar\",\n            \"clima\": \"hot\",\n            \"terreno\": \"volcanoes, lava rivers, mountains, caves\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 13,\n            \"nome\": \"Kashyyyk\",\n            \"clima\": \"tropical\",\n            \"terreno\": \"jungle, forests, lakes, rivers\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 14,\n            \"nome\": \"Polis Massa\",\n            \"clima\": \"artificial temperate\",\n            \"terreno\": \"airless asteroid\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 15,\n            \"nome\": \"Mygeeto\",\n            \"clima\": \"frigid\",\n            \"terreno\": \"glaciers, mountains, ice canyons\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 16,\n            \"nome\": \"Felucia\",\n            \"clima\": \"hot, humid\",\n            \"terreno\": \"fungus forests\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 17,\n            \"nome\": \"Cato Neimoidia\",\n            \"clima\": \"temperate, moist\",\n            \"terreno\": \"mountains, fields, forests, rock arches\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 18,\n            \"nome\": \"Saleucami\",\n            \"clima\": \"hot\",\n            \"terreno\": \"caves, desert, mountains, volcanoes\",\n            \"qtdFilmes\": 1\n        },\n        {\n            \"id\": 19,\n            \"nome\": \"Stewjon\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"grass\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 20,\n            \"nome\": \"Eriadu\",\n            \"clima\": \"polluted\",\n            \"terreno\": \"cityscape\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 21,\n            \"nome\": \"Corellia\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"plains, urban, hills, forests\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 22,\n            \"nome\": \"Rodia\",\n            \"clima\": \"hot\",\n            \"terreno\": \"jungles, oceans, urban, swamps\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 23,\n            \"nome\": \"Nal Hutta\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"urban, oceans, swamps, bogs\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 24,\n            \"nome\": \"Dantooine\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"oceans, savannas, mountains, grasslands\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 25,\n            \"nome\": \"Bestine IV\",\n            \"clima\": \"temperate\",\n            \"terreno\": \"rocky islands, oceans\",\n            \"qtdFilmes\": 0\n        },\n        {\n            \"id\": 26,\n            \"nome\": \"Super Planeta\",\n            \"clima\": \"Frio\",\n            \"terreno\": \"Bom\",\n            \"qtdFilmes\": 16\n        }\n    ],\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "3-Chama ao endpoint - /api/planeta/listarPorNome{nome}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/listarPorNome/Alderaan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"listarPorNome",
+						"Alderaan"
+					]
+				},
+				"description": "Chamada do endpoint que serve para listar um planeta por nome no banco."
+			},
+			"response": [
+				{
+					"name": "3-Chama ao endpoint - /api/planeta/listarPorNome{nome}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/listarPorNome/Alderaan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"listarPorNome",
+								"Alderaan"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Feb 2019 09:16:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"conteudoDoResponse\": {\n        \"id\": 1,\n        \"nome\": \"Alderaan\",\n        \"clima\": \"temperate\",\n        \"terreno\": \"grasslands, mountains\",\n        \"qtdFilmes\": 2\n    },\n    \"errors\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "4-Chama ao endpoint - /api/planeta/listarTodosApiStarWars",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/listarTodosApiStarWars/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"listarTodosApiStarWars",
+						"1"
+					]
+				},
+				"description": "Chamada do endpoint que serve para listar todos os planetas da api \"SWAPI The Star Wars API\".."
+			},
+			"response": [
+				{
+					"name": "4-Chama ao endpoint - /api/planeta/listarTodosApiStarWars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/listarTodosApiStarWars/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"listarTodosApiStarWars",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "5-Chama ao endpoint - /api/planeta/adicionar - Autenticação BASIC",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Super Planeta\",\n    \"clima\": \"Frio\",\n    \"terreno\": \"Bom\",\n    \"qtdFilmes\": 16\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/adicionar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"adicionar"
+					]
+				},
+				"description": "Chamada do endpoint que serve para adicionar um planeta."
+			},
+			"response": [
+				{
+					"name": "5-Chama ao endpoint - /api/planeta/adicionar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Super Planeta\",\n    \"clima\": \"Frio\",\n    \"terreno\": \"Bom\",\n    \"qtdFilmes\": 16\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/adicionar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"adicionar"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Feb 2019 09:16:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"conteudoDoResponse\": null,\n    \"errors\": [\n        \"Planeta já existente no banco de dados.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "6-Chama ao endpoint - /api/planeta/remover/{id} - Autenticação BASIC",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/planeta/remover/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"planeta",
+						"remover",
+						"1"
+					]
+				},
+				"description": "Remove um planeta pelo id no banco de dados."
+			},
+			"response": [
+				{
+					"name": "6-Chama ao endpoint - /api/planeta/remover/{id}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/planeta/remover/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"planeta",
+								"remover",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "342f9c12-144c-441c-8e0e-b2212b8d56b0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fdfca558-bbf9-4ec5-ad23-5f49aa6b463d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
