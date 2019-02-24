@@ -29,7 +29,7 @@ public class Planeta implements Serializable {
     private String terreno;
     
 	@Column(name = "quantidadeAparicoesEmFilmes", nullable = false)
-    private int quantidadeAparicoesEmFilmes=0;
+    private int quantidadeAparicoesEmFilmes = 0;
     
 	
 	public Planeta() {

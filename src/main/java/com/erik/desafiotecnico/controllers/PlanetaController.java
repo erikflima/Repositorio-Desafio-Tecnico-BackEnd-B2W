@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Optional;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -37,13 +39,18 @@ import com.erik.desafiotecnico.service.PlanetaService;
 @RequestMapping("/api/planeta")  
 public class PlanetaController {
            
+	
+	private static final Logger log = LoggerFactory.getLogger( PlanetaController.class );	
 
+	
 	@Autowired
 	private PlanetaService planetaService;
 	
 	
 	@GetMapping(value = "/listarPorId/{id}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > listarPorId( @PathVariable("id") Long id) {
+		
+		log.info("Iniciando a listagem de Planeta pelo id: ", id);
 		
 		ResponsePadronizado<PlanetaDto> responsePadronizado = new ResponsePadronizado<PlanetaDto>();
 		
@@ -52,7 +59,6 @@ public class PlanetaController {
 		
 		if ( !planeta.isPresent() ){
 		
-			//204-No Content
 			return ResponseEntity.noContent().build();
 		}
 
@@ -65,6 +71,8 @@ public class PlanetaController {
 
 	@GetMapping(value = "/listarTodos", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<List<PlanetaDto> > >listarTodos() {
+		
+		log.info("Iniciando a listagem de todos os Planetas que estão no banco de dados");
 		
 		ResponsePadronizado<List<PlanetaDto>> responsePadronizado = new ResponsePadronizado<List<PlanetaDto>>();
 		
@@ -87,6 +95,8 @@ public class PlanetaController {
 	@GetMapping(value = "/listarPorNome/{nome}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > listarPorNome( @PathVariable("nome") String nome) {
 		
+		log.info("Iniciando a listagem de Planeta pelo nome: ", nome);
+		
 		ResponsePadronizado<PlanetaDto> responsePadronizado = new ResponsePadronizado<PlanetaDto>();
 		
 		
@@ -108,6 +118,8 @@ public class PlanetaController {
 	@GetMapping(value = "/listarTodosApiStarWars/{numeroDaPagina}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<DadosDaApiStarWarsDto> >listarTodosApiStarWars( @PathVariable("numeroDaPagina") int numeroDaPagina) {
 		
+		log.info("Iniciando a listagem de todos os Planetas da api 'SWAPI The Star Wars API'");
+		
 		ResponsePadronizado<DadosDaApiStarWarsDto> responsePadronizado = new ResponsePadronizado<DadosDaApiStarWarsDto>();
 		
 		
@@ -115,7 +127,6 @@ public class PlanetaController {
 			
 			responsePadronizado.getErrors().add("Número da pagina deve ser maior que zero.");
 			
-			//+500
 			return ResponseEntity.badRequest().body(responsePadronizado);	
 		}
 		
@@ -149,7 +160,6 @@ public class PlanetaController {
 			
 			responsePadronizado.getErrors().add("Não possível consumir o serviço da api do endereço: " +uri.toString() );
 			
-			//+500
 			return ResponseEntity.badRequest().body(responsePadronizado);
 		}
 
@@ -193,6 +203,8 @@ public class PlanetaController {
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > adicionar( @Valid @RequestBody PlanetaDto          planetaDto,
 			                                                                                BindingResult       resultadoDaValidacao,
 			                                                                                HttpServletResponse response             ) throws NoSuchAlgorithmException {	
+		
+		log.info("Iniciando o metodo para adicionar um Planeta no banco de dados.'");
 		
 		ResponsePadronizado<PlanetaDto> responsePadronizado = new ResponsePadronizado<PlanetaDto>();		
 		
@@ -242,10 +254,10 @@ public class PlanetaController {
 	}
 	
 	
-	
-	
 	@DeleteMapping(value = "/remover/{id}", produces="application/json")
 	public ResponseEntity< ResponsePadronizado<String> > remover( @PathVariable("id") Long id) {	
+		
+		log.info("Iniciando o metodo para remover o Planeta de id: " +id);
 		
 		//Preparando o objeto de resposta padronizada que criei.
 		ResponsePadronizado<String> responsePadronizado = new ResponsePadronizado<String>();
@@ -271,8 +283,6 @@ public class PlanetaController {
 		return ResponseEntity.ok().body( responsePadronizado );
 		
 	}
-	
-	
 	
 	
 	/* Verifica se um planeta ja esta no banco de dados.

@@ -20,38 +20,29 @@ public class DadosDaApiStarWarsDto {
 	DadosDaApiStarWarsDto(){
 	}
 
-
-
 	//-------------------------Getters and Setters----------------------//
 	
 	public String getQuantidadeDePlanetas() {
 		return quantidadeDePlanetas;
 	}
 
-
 	public void setQuantidadeDePlanetas(String quantidadeDePlanetas) {
 		this.quantidadeDePlanetas = quantidadeDePlanetas;
 	}
 	
-	
-
 
 	public String getUriParaProximaPagina() {
 		return uriParaProximaPagina;
 	}
 
-
 	public void setUriParaProximaPagina(String uriParaProximaPagina) {
 		this.uriParaProximaPagina = uriParaProximaPagina;
 	}
 	
-	
-
 
 	public List<PlanetaDtoApiStarWars> getListaDePlanetas() {
 		return listaDePlanetas;
 	}
-
 
 	public void setListaDePlanetas(List<PlanetaDtoApiStarWars> listaDePlanetas) {
 		this.listaDePlanetas = listaDePlanetas;
