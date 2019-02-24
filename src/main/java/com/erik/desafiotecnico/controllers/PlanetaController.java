@@ -42,7 +42,7 @@ public class PlanetaController {
 	private PlanetaService planetaService;
 	
 	
-	@GetMapping(value = "/listarPorId/{id}") 
+	@GetMapping(value = "/listarPorId/{id}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > listarPorId( @PathVariable("id") Long id) {
 		
 		ResponsePadronizado<PlanetaDto> responsePadronizado = new ResponsePadronizado<PlanetaDto>();
@@ -63,7 +63,7 @@ public class PlanetaController {
 	}	
 
 
-	@GetMapping(value = "/listarTodos") 
+	@GetMapping(value = "/listarTodos", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<List<PlanetaDto> > >listarTodos() {
 		
 		ResponsePadronizado<List<PlanetaDto>> responsePadronizado = new ResponsePadronizado<List<PlanetaDto>>();
@@ -84,7 +84,7 @@ public class PlanetaController {
 	}		
 
 	
-	@GetMapping(value = "/listarPorNome/{nome}") 
+	@GetMapping(value = "/listarPorNome/{nome}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > listarPorNome( @PathVariable("nome") String nome) {
 		
 		ResponsePadronizado<PlanetaDto> responsePadronizado = new ResponsePadronizado<PlanetaDto>();
@@ -105,7 +105,7 @@ public class PlanetaController {
 	}	
 	
 	
-	@GetMapping(value = "/listarTodosApiStarWars/{numeroDaPagina}") 
+	@GetMapping(value = "/listarTodosApiStarWars/{numeroDaPagina}", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<DadosDaApiStarWarsDto> >listarTodosApiStarWars( @PathVariable("numeroDaPagina") int numeroDaPagina) {
 		
 		ResponsePadronizado<DadosDaApiStarWarsDto> responsePadronizado = new ResponsePadronizado<DadosDaApiStarWarsDto>();
@@ -189,7 +189,7 @@ public class PlanetaController {
 	}
 	
 	
-	@PostMapping(value = "/adicionar") 
+	@PostMapping(value = "/adicionar", produces="application/json") 
 	public ResponseEntity< ResponsePadronizado<PlanetaDto> > adicionar( @Valid @RequestBody PlanetaDto          planetaDto,
 			                                                                                BindingResult       resultadoDaValidacao,
 			                                                                                HttpServletResponse response             ) throws NoSuchAlgorithmException {	
@@ -244,7 +244,7 @@ public class PlanetaController {
 	
 	
 	
-	@DeleteMapping(value = "/remover/{id}")
+	@DeleteMapping(value = "/remover/{id}", produces="application/json")
 	public ResponseEntity< ResponsePadronizado<String> > remover( @PathVariable("id") Long id) {	
 		
 		//Preparando o objeto de resposta padronizada que criei.
