@@ -37,7 +37,8 @@ public interface PlanetaService {
 	 */
 	Planeta adicionar(Planeta planeta);
 	
-	/** Remove um lançamento da base de dados.
+	
+	/** Remove um Planeta da base de dados pelo Id.
 	 * 
 	 * @param id
 	 */

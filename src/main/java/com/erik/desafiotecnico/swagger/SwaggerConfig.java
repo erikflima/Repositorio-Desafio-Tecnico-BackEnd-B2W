@@ -35,10 +35,10 @@ public class SwaggerConfig {
 	    String  title             = "Documentação com Swagger API - Projeto Desafio-Tecnico-BackEnd-B2W";
 	    String  description       = "Documentação do Erik feita com Swagger do projeto Desafio-Tecnico-BackEnd-B2W\n - Lista de endpoints da aplicação com detalhamento";
         String  version           = "1.0";
-        String  termsOfServiceUrl = "https://site-do-erik.com/termos";
+        String  termsOfServiceUrl = "https://www.linkedin.com/in/eriklima";
         String  license           = "Licensa";
-        String  licenseUrl        = "https://site-do-erik.com/licensa";
-        Contact contact           = new Contact("Erik Lima", "https://erikcompany", "erik.f.alves.lima@gmail.com");
+        String  licenseUrl        = "https://www.linkedin.com/in/eriklima";
+        Contact contact           = new Contact("Erik Lima", "https://www.linkedin.com/in/eriklima", "erik.f.alves.lima@gmail.com");
 
         
 		ApiInfo apiInfo = new ApiInfo( title, description, version, termsOfServiceUrl, contact, license, licenseUrl );
